@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 
 
+
 const Header = ({children}:HeaderProps) => {
   return (
     <div className='header'>
