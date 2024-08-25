@@ -1,8 +1,14 @@
-import { Liveblocks } from "@liveblocks/node";
+import { liveblocks } from "@/lib/liveblocks";
+import { currentUser } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+
+
 
 
 
 export async function POST(request: Request) {
+    const clerkUser = await currentUser();
+    if (!clerkUser) redirect('/sign-in')
   // Get the current user from your database
   const user = __getUserFromDB__(request);
 
