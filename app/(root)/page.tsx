@@ -7,17 +7,17 @@ import { currentUser } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
 import AddDocumentBtn from '@/components/AddDocumentBtn'
 
-const Home = async() => {
+const Home = async () => {
 
   const clerkUser = await currentUser();
   if(!clerkUser) redirect('/sign-in')
 
-  const documents =[]
+  const documents =[];
   return (
     <main className="home-container">
     <Header className="sticky left-0 top-0">
       <div className="flex items-center gap-2 lg:gap-4">
-      
+        Notification
         <SignedIn>
           <UserButton />
         </SignedIn>
