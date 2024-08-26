@@ -3,8 +3,13 @@ import { Button } from '@/components/ui/button'
 import { SignedIn, UserButton } from '@clerk/nextjs'
 import React from 'react'
 import Image from 'next/image'
+import { currentUser } from '@clerk/nextjs/server'
+import { redirect } from 'next/navigation'
 
-const Home = () => {
+const Home = async() => {
+
+  const clerkUser = await currentUser();
+  if(!clerkUser) redirect('/sign-in')
 
   const documents =[]
   return (
