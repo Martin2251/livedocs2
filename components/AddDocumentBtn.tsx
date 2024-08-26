@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddDocumentBtn = () => {
+const AddDocumentBtn = ({userId, email }:AddDocumentBtnProps) => {
   return (
     <div>
       

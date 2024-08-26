@@ -5,6 +5,7 @@ import React from 'react'
 import Image from 'next/image'
 import { currentUser } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
+import AddDocumentBtn from '@/components/AddDocumentBtn'
 
 const Home = async() => {
 
@@ -32,6 +33,12 @@ const Home = async() => {
       width={40}
       height={40}
       className="mx-auto"/>
+
+      <AddDocumentBtn
+      userId={clerkUser.id}
+      email={clerkUser.emailAddresses[0].emailAddress}
+
+      />
       </div>)}
 
   </main>
