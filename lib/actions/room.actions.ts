@@ -5,7 +5,7 @@ import { liveblocks } from "../liveblocks";
 import { revalidatePath } from "next/cache";
 import { parseStringify } from "../utils";
 
-export const createDocument = async({userId, email}: CreateDocumentParams) =>{
+export const createDocument = async ({userId, email}: CreateDocumentParams) =>{
 
 
     const roomId = nanoid()
@@ -27,9 +27,9 @@ export const createDocument = async({userId, email}: CreateDocumentParams) =>{
            defaultAccesses:[]
           });
 
-          revalidatePath('/')
+          revalidatePath('/');
 
-          return parseStringify(room)
+          return parseStringify(room);
 
     } catch(error){
         console.log(`Error happened while creating a room: ${error}`)

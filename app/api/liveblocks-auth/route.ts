@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     const {status, body } = await liveblocks.identifyUser(
         {
             userId: user.info.email,
-            groupIds:[]
+            groupIds:[],
         },
         {userInfo:user.info}
     )
