@@ -1,4 +1,5 @@
 import { liveblocks } from "@/lib/liveblocks";
+import { getUserColor } from "@/lib/utils";
 import { EmailAddress, currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import { emit } from "process";
@@ -23,9 +24,9 @@ export async function POST(request: Request) {
         info:{
             id,
             name:`${firstName} ${lastName}`,
-            email: emailAddress[0].emailAddress,
+            email: emailAddresses[0].emailAddress,
             avatar:imageUrl,
-            color:""
+            color:getUserColor(id)
 
         }
     }
