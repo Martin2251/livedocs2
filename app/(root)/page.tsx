@@ -28,7 +28,7 @@ const Home = async() => {
 
       </div>
     ):(<div className='documents-list-empty'>
-      <Image src="/assets/icons.doc.svg"
+      <Image src="/assets/icons/doc.svg"
       alt="document"
       width={40}
       height={40}
