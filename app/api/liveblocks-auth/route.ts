@@ -24,6 +24,8 @@ export async function POST(request: Request) {
             id,
             name:`${firstName} ${lastName}`,
             email: emailAddress[0].emailAddress,
+            avatar:imageUrl,
+            color:""
 
         }
     }
